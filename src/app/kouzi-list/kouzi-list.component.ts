@@ -8,6 +8,7 @@ import { kouzis } from '../../kouzi';
 })
 export class KouziListComponent implements OnInit {
   kouzis = kouzis;
+  pageCount = Math.ceil(kouzis.length / 2);
   constructor() {}
 
   ngOnInit() {}

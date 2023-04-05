@@ -1,31 +1,26 @@
-<h2>工事リスト</h2>
+<h2></h2>
 
 <div class="datagrid">
   <div class="dgTop">
     <div class="myTable">
-      <table width="100%" border="0" cellspacing="1px" cellpadding="0">
-        <tr>
-          <th>
-            工事番号
-            <a href="javascript:void(0)" title="Sort" class="dataSorting"></a>
-          </th>
-          <th>
-            工事名称
-            <a href="javascript:void(0)" title="Sort" class="dataSorting"></a>
-          </th>
-          <th>
-            予算番号<a
-              href="javascript:void(0)"
-              title="Sort"
-              class="dataSorting"
-            ></a>
-          </th>
-        </tr>
-        <tr *ngFor="let kouzi of kouzis">
-          <td>{{ kouzi.kojino }}</td>
-          <td>{{ kouzi.kojinm }}</td>
-          <td>{{ kouzi.yosano }}</td>
-        </tr>
+      <table>
+        <caption>
+          工事一覧
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">工事番号</th>
+            <th scope="col">工事名称</th>
+            <th scope="col">予算番号</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let kouzi of kouzis">
+            <td data-label="工事番号">{{ kouzi.kojino }}</td>
+            <td data-label="工事名称">{{ kouzi.kojinm }}</td>
+            <td data-label="予算番号">{{ kouzi.yosano }}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
